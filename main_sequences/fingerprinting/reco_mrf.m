@@ -140,4 +140,4 @@ end
 %% save results
 res.match = match; res.images = images;
 params.params_dict = params_dict; params.params_reco = params_reco; params.params_LR = params_LR;
-save_study_results(res, params, study_info);
+save_study_results(res, params, study_info, 'prompt', 1);
