@@ -36,6 +36,10 @@ end
 if ~exist('time_stamps', 'var')
     time_stamps = [];
 end
+if ndims(time_stamps)>1
+    time_stamps = squeeze(time_stamps);
+end
+time_stamps = time_stamps(:);
 if ~exist('f0', 'var')
     f0 = [];
 end
