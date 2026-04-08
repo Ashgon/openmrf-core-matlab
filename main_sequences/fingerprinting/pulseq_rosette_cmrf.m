@@ -126,17 +126,6 @@ INV.mu           = 4.9;       % [ ]  determines amplitude of frequency sweep
 INV.inv_rec_time = [15 75 150 250] *1e-3;
 INV = INV_init(INV, FOV, system);
 
-%% params: Saturation
-SAT.mode         = 'on';
-SAT.rf_type      = 'adiabatic_BIR4';
-SAT.bir4_tau     = 10 *1e-3;  % [s]  bir4 pulse duration
-SAT.bir4_f1      = 640;       % [Hz] maximum rf peak amplitude
-SAT.bir4_beta    = 10;        % [ ]  am waveform parameter
-SAT.bir4_kappa   = atan(10);  % [ ]  fm waveform parameter
-SAT.bir4_dw0     = 30000;     % [rad/s] fm waveform scaling
-SAT.sat_rec_time = [100 200] *1e-3; % [s] saturation times
-SAT = SAT_init(SAT, FOV, system);
-
 %% params: T2 preparation
 T2.exc_mode   = 'adiabatic_BIR4';
 T2.rfc_dur    = 2 *1e-3;   % [s]  duration of composite refocusing pulses
