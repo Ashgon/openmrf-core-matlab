@@ -39,14 +39,29 @@ end
 if ~isfield(TRAJ, 'lim_slew')
     TRAJ.lim_slew = 0.75;
 end
+if ~isfield(TRAJ, 'flag_approx')
+    TRAJ.flag_approx = [];
+end
+if isempty(TRAJ.flag_approx)
+    TRAJ.flag_approx = false;
+end
 
-%% create adc for trajectory measurement and rotate projections
-TRAJ.NR  = numel(SPI.rot);
-TRAJ.adc = SPI.adc;
+%% define gradient waveforms for trajectory measurement and import adc
+
+if TRAJ.flag_approx
+    TRAJ.phi_approx = linspace(0, 2*pi, TRAJ.NR+1);
+    TRAJ.phi_approx(end) = [];
+    for j = 1:TRAJ.NR
+        TRAJ.rot(j,1) = mr.makeRotation(TRAJ.phi_approx(j), 0);
+    end
+else
+    TRAJ.rot = SPI.rot;
+    TRAJ.NR  = numel(SPI.rot);
+end
 
 temp_g = [SPI.gx.waveform, SPI.gy.waveform, SPI.gz.waveform];
 for j=1:TRAJ.NR
-    temp_g_rot = (mr.aux.quat.toRotMat(SPI.rot(j).rotQuaternion) * temp_g')';
+    temp_g_rot = (mr.aux.quat.toRotMat(TRAJ.rot(j).rotQuaternion) * temp_g')';
     TRAJ.gx(j,1) = SPI.gx;
     TRAJ.gy(j,1) = SPI.gy;
     TRAJ.gx(j,1).waveform = temp_g_rot(:,1);
@@ -54,7 +69,8 @@ for j=1:TRAJ.NR
 end
 clear temp_g temp_g_rot;
 
-TRAJ.adc.phaseOffset = pi/2;
+% use identical adc for calibration
+TRAJ.adc = SPI.adc;
 
 %% calculate dummy delay object for reference scans
 TRAJ.ref_delay = mr.makeDelay(mr.calcDuration(TRAJ.gx(1), TRAJ.gy(1)));
