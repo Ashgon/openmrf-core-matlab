@@ -19,4 +19,4 @@ This folder contains example Pulseq sequences based on the `include_pulseq_toolb
 - **relax_mapping/**  
   Fast mapping sequences using spiral readouts and contrast preparations
 
-_Maximilian Gram: 09.03.2026_
+_Maximilian Gram: 24.04.2026_

@@ -34,4 +34,4 @@ This folder provides components for non-Cartesian image reconstruction using the
   ✉️ nse@med.umich.edu  
   🔗 [Profile](https://medicine.umich.edu/dept/radiology/nicole-seiberlich-phd)
 
-_Maximilian Gram: 09.03.2026_
+_Maximilian Gram: 24.04.2026_

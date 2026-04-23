@@ -41,4 +41,4 @@ This folder contains auxiliary tools and libraries used in various parts of the 
 - **src_vds**  
   Variable-Density Spiral Design Functions by Brian Hargreaves: [VDS toolbox](http://mrsrl.stanford.edu/~brian/vdspiral/).
 
-_Maximilian Gram: 09.03.2026_
+_Maximilian Gram: 24.04.2026_

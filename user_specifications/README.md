@@ -10,4 +10,4 @@ This folder contains user specific definitions and MRI system specifications
 - **system_definitions/**  
   contains some examples for systems specifications stored in .csv files. NOTE: never share system-specific .asc files. These files are not publicly distributed within OpenMRF (see .gitignore).
 
-_Maximilian Gram: 09.03.2026_
+_Maximilian Gram: 24.04.2026_

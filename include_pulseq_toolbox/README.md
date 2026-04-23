@@ -70,4 +70,4 @@ The following repositories were used for the basic EPI, RAD, SPITSE, TSE and UTE
     - https://pulseq.github.io/writeTSE.html, https://pulseq.github.io/writeUTE_rs.html
 
   
-_Maximilian Gram: 09.03.2026_
+_Maximilian Gram: 24.04.2026_

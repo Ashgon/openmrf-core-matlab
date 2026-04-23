@@ -19,4 +19,4 @@ This folder contains pre-computed dictionaries, slice profiles, adiabatic effici
 - **time_optimized_gradients/**  
   Time optimized gradient waveforms calculated with the package in: /include_misc/src_tOptGrad
 
-_Maximilian Gram: 09.03.2026_
+_Maximilian Gram: 24.04.2026_

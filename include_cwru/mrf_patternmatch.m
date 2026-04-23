@@ -75,3 +75,4 @@ function match = mrf_patternmatch(images, dict, look_up, look_up_names, roimask,
 
 end
 
+

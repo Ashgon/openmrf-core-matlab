@@ -54,4 +54,4 @@ By accessing or using the MRF functionality provided in this repository, users a
 
 This repository includes third-party software distributed under their respective licenses. Please consult the [NOTICE](./NOTICE) file before use. Not all code in this repository is MIT-licensed. Users intending commercial use must review the [NOTICE](./NOTICE) file and seek appropriate permissions from the original authors.
 
-_The OpenMRF Team: 22.03.2026_
+_The OpenMRF Team: 24.04.2026_
